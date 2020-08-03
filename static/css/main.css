@@ -1,8 +1,32 @@
+/*
+* General
+*/
+
+/*
+* Base Page
+*/
+
 .container {
     margin-top: 56px;
 }
+
+/*
+* Index Page
+*/
 
 .index_intro_div {
     padding: 3rem 1.5rem;
     text-align: center;
 }
+
+/*
+* Login Page
+*/
+
+/*
+* Posts Page
+*/
+
+/*
+* Edit Page
+*/
