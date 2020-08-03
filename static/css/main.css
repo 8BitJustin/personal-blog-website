@@ -15,8 +15,32 @@
 */
 
 .index_intro_div {
-    padding: 3rem 1.5rem;
+    padding: 4rem 1.5rem;
     text-align: center;
+}
+
+.solo_post_div {
+    margin: 3rem 0;
+}
+
+.post_title {
+    font-size: 2rem;
+    border-bottom: 1px solid #212529;
+    margin: 0 auto;
+}
+
+.post_created {
+    font-size: 1rem;
+    margin: 0 auto 1rem;
+}
+
+.post_content {
+
+}
+
+.post_title, .post_created {
+    text-align: center;
+    width: 60%;
 }
 
 /*
