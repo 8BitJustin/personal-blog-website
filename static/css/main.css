@@ -47,6 +47,31 @@
 * Login Page
 */
 
+.login_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 56px)
+}
+
+.login_form_div {
+    width: 40%;
+}
+
+.form_header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form_btn {
+    background-color: transparent;
+    color: #0062cc;
+}
+
+.form_btn p {
+    margin: 0;
+}
+
 /*
 * Posts Page
 */
