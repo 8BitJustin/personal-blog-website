@@ -15,8 +15,17 @@
 */
 
 .index_intro_div {
-    padding: 6rem 1.5rem;
+    padding: 4rem 1.5rem 2rem;
     text-align: center;
+    border-bottom: 1px solid #212529;
+}
+
+.all_post_div {
+    margin: 2rem;
+}
+
+.solo_post_div:first-of-type {
+    margin-top: 2rem;
 }
 
 .solo_post_div {
