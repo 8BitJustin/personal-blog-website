@@ -15,7 +15,7 @@
 */
 
 .index_intro_div {
-    padding: 4rem 1.5rem;
+    padding: 6rem 1.5rem;
     text-align: center;
 }
 
@@ -32,6 +32,7 @@
 .post_created {
     font-size: 1rem;
     margin: 0 auto 1rem;
+    text-align: right;
 }
 
 .post_content {
@@ -39,7 +40,6 @@
 }
 
 .post_title, .post_created {
-    text-align: center;
     width: 60%;
 }
 
