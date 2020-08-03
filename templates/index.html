@@ -7,19 +7,19 @@
 {% block body %}
 <div class="index_intro_div">
     <h1 class="display-3">Hello, world!</h1>
-    <p class="lead">Use this document as a way to quickly start any new
-        project.
+    <p class="lead">Here is my simple blog site to reflect my path with
+        learning how to code.
         <br>
-        All you get is this text and a mostly barebones HTML
-        document.</p>
+        Built using Python, Flask, SQLAlchemy, and Bootstrap 4. Please read
+        and enjoy!</p>
   </div>
 <h2 class="display-4">All Posts</h2>
 <div class="all_post_div">
     {% for post in posts %}
     <div class="solo_post_div">
         <p class="post_title lead">{{ post.title }}</p>
-        <p class="post_content lead">{{ post.content }}</p>
         <p class="post_created lead">{{ post.created }}</p>
+        <p class="post_content lead">{{ post.content }}</p>
     </div>
     {% endfor %}
 </div>
