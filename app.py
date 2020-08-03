@@ -38,7 +38,7 @@ all_posts = [
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', posts=all_posts)
 
 
 @app.route('/login')

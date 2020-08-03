@@ -11,5 +11,15 @@
       <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
       <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
     </div>
-  </div>
+</div>
+<h2>All Posts</h2>
+<div class="all_post_div">
+    {% for post in posts %}
+    <div class="solo_post_div">
+        <h3 class="post_title">{{ post.title }}</h3>
+        <h4 class="post_content">{{ post.content }}</h4>
+        <h6 class="post_created">{{ post.created }}</h6>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}
