@@ -24,7 +24,7 @@
             <ul class="navbar-nav ml-auto">
             {% if active_page == 'index' %}
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Home  <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/login">Login</a>
@@ -36,6 +36,13 @@
             {% elif active_page == 'posts' %}
                 <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
+                </li>
+            {% elif active_page == 'edit' %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/posts">Back</a>
                 </li>
             {% endif %}
             </ul>
