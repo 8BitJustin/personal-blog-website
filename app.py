@@ -48,7 +48,7 @@ def login():
 
 @app.route('/posts')
 def posts():
-    return render_template('posts.html')
+    return render_template('posts.html', posts=all_posts)
 
 
 @app.route('/edit')

@@ -1,9 +1,30 @@
 {% extends 'base.html' %}
+{% set active_page = "posts" %}
 
 {% block head %}
 <title>Home</title>
 {% endblock %}
 
 {% block body %}
-<h1>Posts Page</h1>
+<div class="create_post_div">
+    <div class="create_post_form">
+        <form action="/posts" method="POST">
+            <input type="text" name="title" id="title" class="inputs"
+                   placeholder="Title">
+            <textarea name="post" id="post" class="inputs" rows="3"
+                      placeholder="Post"
+            ></textarea>
+            <input type="submit" value="Post" class="sub_button">
+        </form>
+    </div>
+</div>
+<div class="all_post_div col-md-8 mx-auto">
+    {% for post in posts %}
+    <div class="solo_post_div">
+        <p class="post_title lead">{{ post.title }}</p>
+        <p class="post_created lead">{{ post.created }}</p>
+        <p class="post_content lead">{{ post.content }}</p>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}
