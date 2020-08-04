@@ -115,6 +115,11 @@ input[type=text] {
     margin: 0 auto;
 }
 
+.icons {
+    height: 24px;
+    margin: 0 6px;
+}
+
 /*
 * Edit Page
 */
