@@ -21,11 +21,12 @@
 }
 
 .all_post_div {
-    margin: 2rem;
+    margin: 4rem;
 }
 
-.solo_post_div:first-of-type {
-    margin-top: 2rem;
+.all_post_div h2 {
+    font-size: 2rem;
+    text-align: center;
 }
 
 .solo_post_div {
