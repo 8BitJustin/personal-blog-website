@@ -2,6 +2,12 @@
 * General
 */
 
+textarea,
+input[type=submit],
+input[type=text] {
+    font-family: 'Roboto', sans-serif;
+}
+
 /*
 * Base Page
 */
@@ -85,6 +91,29 @@
 /*
 * Posts Page
 */
+
+.create_post_div {
+    margin-top: 8rem;
+}
+
+.inputs {
+    border: 1px solid #ccc;
+    display: block;
+    width: 40%;
+    margin: 6px auto;
+    /* box-sizing used to align inputs with button width */
+    box-sizing: border-box;
+}
+
+.sub_button {
+    display: block;
+    width: 40%;
+    background-color: Transparent;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+}
 
 /*
 * Edit Page
