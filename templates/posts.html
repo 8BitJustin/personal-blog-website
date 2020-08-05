@@ -26,7 +26,7 @@
             {{ post.created.strftime("%A, %b %d %Y @ %I:%M %p") }}
         </p>
         <p class="post_content lead">{{ post.content }}</p>
-        <a href="/edit"><img src="../static/images/edit.png" alt="Edit Icon"
+        <a href="/posts/edit/{{ post.id }}"><img src="../static/images/edit.png" alt="Edit Icon"
                          class="icons"
              id="edit_icon"></a>
         <a href="/posts/delete/{{ post.id }}"><img src="../static/images/trash.png" alt="Trash Icon"

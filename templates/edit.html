@@ -8,12 +8,11 @@
 {% block body %}
 <div class="create_post_div">
     <div class="create_post_form">
-        <form action="/posts" method="POST">
+        <form action="/posts/edit/{{ post.id }}" method="POST">
             <input type="text" name="title" id="title" class="inputs"
-                   placeholder="Title">
-            <textarea name="post" id="post" class="inputs" rows="3"
-                      placeholder="Post"
-            ></textarea>
+                   value="{{ post.title }}">
+            <textarea name="content" id="content" class="inputs" rows="3"
+            >{{ post.content }}</textarea>
             <input type="submit" value="Update" class="sub_button">
         </form>
     </div>
