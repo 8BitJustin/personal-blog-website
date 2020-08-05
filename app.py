@@ -17,40 +17,6 @@ class BlogPost(db.Model):
         return 'Blog post ' + str(self.id)
 
 
-# all_posts = [
-#     {
-#         'title': 'Post 1',
-#         'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-#                    ' Donec leo lacus, pretium at turpis eget, lacinia'
-#                    ' porttitor tellus. Pellentesque ipsum mauris, pretium quis'
-#                    ' posuere sit amet, gravida eget augue. Orci varius natoque'
-#                    ' penatibus et magnis dis parturient montes, nascetur'
-#                    ' ridiculus mus.',
-#         'created': 'Jan 1, 2020 @ 8:00am'
-#     },
-#     {
-#         'title': 'Post 2',
-#         'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-#                    ' Donec leo lacus, pretium at turpis eget, lacinia'
-#                    ' porttitor tellus. Pellentesque ipsum mauris, pretium quis'
-#                    ' posuere sit amet, gravida eget augue. Orci varius natoque'
-#                    ' penatibus et magnis dis parturient montes, nascetur'
-#                    ' ridiculus mus.',
-#         'created': 'Jan 2, 2020 @ 8:00am'
-#     },
-#     {
-#         'title': 'Post 3',
-#         'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-#                    ' Donec leo lacus, pretium at turpis eget, lacinia'
-#                    ' porttitor tellus. Pellentesque ipsum mauris, pretium quis'
-#                    ' posuere sit amet, gravida eget augue. Orci varius natoque'
-#                    ' penatibus et magnis dis parturient montes, nascetur'
-#                    ' ridiculus mus.',
-#         'created': 'Jan 3, 2020 @ 8:00am'
-#     }
-# ]
-
-
 @app.route('/')
 def index():
     all_posts = BlogPost.query.order_by(BlogPost.created).all()
