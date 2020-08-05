@@ -61,7 +61,7 @@ def login():
     return render_template('login.html')
 
 
-@app.route('/posts')
+@app.route('/posts', methods=['GET', 'POST'])
 def posts():
     return render_template('posts.html', posts=all_posts)
 
