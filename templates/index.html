@@ -21,7 +21,9 @@
     {% for post in posts %}
     <div class="solo_post_div">
         <p class="post_title lead">{{ post.title }}</p>
-        <p class="post_created lead">{{ post.created }}</p>
+        <p class="post_created lead">
+            {{ post.created.strftime("%A, %b %d %Y @ %I:%M %p") }}
+        </p>
         <p class="post_content lead">{{ post.content }}</p>
     </div>
     {% endfor %}
