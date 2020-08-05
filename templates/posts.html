@@ -25,10 +25,11 @@
         <p class="post_created lead">
             {{ post.created.strftime("%A, %b %d %Y @ %I:%M %p") }}
         </p>
+        <p class="post_content lead">{{ post.content }}</p>
         <a href="/edit"><img src="../static/images/edit.png" alt="Edit Icon"
                          class="icons"
              id="edit_icon"></a>
-        <a href="#"><img src="../static/images/trash.png" alt="Trash Icon"
+        <a href="/posts/delete/{{ post.id }}"><img src="../static/images/trash.png" alt="Trash Icon"
                          class="icons"
              id="trash_icon"></a>
     </div>

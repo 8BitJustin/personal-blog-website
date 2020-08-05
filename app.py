@@ -76,6 +76,14 @@ def posts():
         return render_template('posts.html', posts=all_posts)
 
 
+@app.route('/posts/delete/<int:id>')
+def delete(id):
+    post = BlogPost.query.get_or_404(id)
+    db.session.delete(post)
+    db.session.commit()
+    return redirect('/posts')
+
+
 @app.route('/edit')
 def edit():
     return render_template('edit.html')
