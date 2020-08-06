@@ -20,6 +20,7 @@ class BlogPost(db.Model):
 
 class User(db.Model):
     __bind_key__ = 'users'
+    id = db.Column(db.Integer, primary_key=True)
 
 
 @app.route('/')
