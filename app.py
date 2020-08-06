@@ -37,7 +37,7 @@ def load_user(user_id):
 
 @app.route('/')
 def index():
-    all_posts = BlogPost.query.order_by(BlogPost.created).all()
+    all_posts = BlogPost.query.order_by(BlogPost.created.desc()).all()
     return render_template('index.html', posts=all_posts)
 
 
@@ -72,7 +72,7 @@ def posts():
         db.session.commit()
         return redirect('/posts')
     else:
-        all_posts = BlogPost.query.order_by(BlogPost.created).all()
+        all_posts = BlogPost.query.order_by(BlogPost.created.desc()).all()
         return render_template('posts.html', posts=all_posts)
 
 
