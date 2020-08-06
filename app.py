@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager, UserMixin
+from flask_login import LoginManager, UserMixin, login_user, login_required,\
+    current_user
 from datetime import datetime
 
 app = Flask(__name__)
@@ -34,7 +35,6 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-
 @app.route('/')
 def index():
     all_posts = BlogPost.query.order_by(BlogPost.created).all()
@@ -47,6 +47,7 @@ def login():
 
 
 @app.route('/posts', methods=['GET', 'POST'])
+@login_required
 def posts():
     if request.method == 'POST':
         post_title = request.form['title']
