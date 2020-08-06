@@ -1,11 +1,15 @@
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager, UserMixin
 from datetime import datetime
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
 app.config['SQLALCHEMY_BINDS'] = {'users': 'sqlite:///users.db'}
+app.config['SECRET_KEY'] = 'secretkeydundundunn'
 db = SQLAlchemy(app)
+login_manager = LoginManager()
+login_manager.init_app(app)
 
 
 class BlogPost(db.Model):
@@ -18,9 +22,17 @@ class BlogPost(db.Model):
         return 'Blog post ' + str(self.id)
 
 
-class User(db.Model):
+class User(UserMixin, db.Model):
     __bind_key__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(30), unique=True)
+    password = db.Column(db.String(10))
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
+
 
 
 @app.route('/')
