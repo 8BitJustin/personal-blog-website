@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required,\
-    current_user
+    logout_user
 from datetime import datetime
 
 app = Flask(__name__)
@@ -43,6 +43,14 @@ def index():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    if request.method == 'POST':
+        user_input = request.form['email']
+        user_pw = request.form['password']
+        user = User.query.all()[0]
+        if user_input == user.email and user_pw == user.password:
+            login_user(user)
+            return redirect(url_for('posts'))
+        return redirect(url_for('login'))
     return render_template('login.html')
 
 
