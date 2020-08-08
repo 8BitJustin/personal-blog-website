@@ -15,6 +15,7 @@ login_manager.init_app(app)
 
 
 class BlogPost(db.Model):
+    __tablename__="data"
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(80), nullable=False)
     content = db.Column(db.Text, nullable=False)
