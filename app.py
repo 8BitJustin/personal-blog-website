@@ -5,7 +5,8 @@ from flask_login import LoginManager, UserMixin, login_user, login_required,\
 from datetime import datetime
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = \
+    'postgresql://postgres:C0d!ng01@localhost/jod_blog'
 app.config['SQLALCHEMY_BINDS'] = {'users': 'sqlite:///users.db'}
 app.config['SECRET_KEY'] = 'secretkeydundundunn'
 db = SQLAlchemy(app)
