@@ -5,8 +5,13 @@ from flask_login import LoginManager, UserMixin, login_user, login_required,\
 from datetime import datetime
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = \
-    'postgresql://postgres:C0d!ng01@localhost/jod_blog'
+# app.config['SQLALCHEMY_DATABASE_URI'] = \
+#     'postgresql://postgres:C0d!ng01@localhost/jod_blog'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ebfscaqqswkhez:21d04ace' \
+                                        '5173378de0930f459f90392664aaafcc69' \
+                                        '40c83f783202363f41c5f4@ec2-52-204-' \
+                                        '20-42.compute-1.amazonaws.com:5432' \
+                                        '/ddu68mi09svum?sslmode=require'
 app.config['SQLALCHEMY_BINDS'] = {'users': 'sqlite:///users.db'}
 app.config['SECRET_KEY'] = 'secretkeydundundunn'
 db = SQLAlchemy(app)
