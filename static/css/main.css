@@ -123,3 +123,43 @@ input[type=text] {
 /*
 * Edit Page
 */
+
+/*
+* Media Queries
+*/
+
+/*
+* Media Queries - Index
+*/
+
+@media (max-width: 575.98px) {
+    .index_intro_div {
+
+    }
+    .index_intro_div h1 {
+        font-size: 2.5rem;
+    }
+    .index_intro_div p {
+        font-size: 1rem;
+    }
+
+    .all_post_div h2 {
+        font-size: 1.5rem;
+    }
+
+    .post_title {
+
+    }
+
+    .post_created {
+
+    }
+
+    .post_content {
+
+    }
+}
+
+
+
+
