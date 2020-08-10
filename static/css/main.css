@@ -126,13 +126,42 @@ input[type=text] {
 * Media Queries - Index
 */
 
+@media (max-width: 767.98px) {
+    .index_intro_div {
+
+    }
+
+    .index_intro_div h1 {
+        font-size: 3.5rem;
+    }
+
+    .index_intro_div p {
+        font-size: 1.125rem;
+    }
+
+    .post_title {
+        font-size: 1.75rem;
+    }
+
+    .post_created {
+        font-size: .875rem;
+    }
+
+    .post_content {
+        font-size: 1.125rem;
+    }
+}
+
+
 @media (max-width: 575.98px) {
     .index_intro_div {
 
     }
+
     .index_intro_div h1 {
         font-size: 2.5rem;
     }
+
     .index_intro_div p {
         font-size: 1rem;
     }
@@ -150,6 +179,6 @@ input[type=text] {
     }
 }
 
-@media (max-width: 767.98px) { ... }
+
 
 

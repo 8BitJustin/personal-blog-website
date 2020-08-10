@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block body %}
-<div class="index_intro_div col-lg-12 col-md-10 mx-auto">
+<div class="index_intro_div col-lg-10 col-md-10 mx-auto">
     <h1 class="display-3">Hello, world!</h1>
     <p class="lead">Here is my simple blog site to reflect my path with
         learning how to code.
@@ -18,7 +18,7 @@
 
 <div class="all_post_div">
     {% for post in posts %}
-    <div class="solo_post_div col-md-10 mx-auto">
+    <div class="solo_post_div col-lg-10 col-md-10 mx-auto">
         <p class="post_title lead">{{ post.title }}</p>
         <p class="post_created lead">
             {{ post.created.strftime("%A, %b %d %Y @ %I:%M %p") }}
