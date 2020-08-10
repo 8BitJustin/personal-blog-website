@@ -64,10 +64,6 @@ input[type=text] {
     height: calc(100vh - 56px)
 }
 
-.login_form_div {
-    width: 40%;
-}
-
 .form_header {
     text-align: center;
     margin-bottom: 2rem;
@@ -93,7 +89,6 @@ input[type=text] {
 .inputs {
     border: 1px solid #ccc;
     display: block;
-    width: 40%;
     margin: 6px auto;
     /* box-sizing used to align inputs with button width */
     box-sizing: border-box;
@@ -101,7 +96,6 @@ input[type=text] {
 
 .sub_button {
     display: block;
-    width: 40%;
     background-color: Transparent;
     border: 1px solid #ccc;
     text-align: center;
@@ -126,6 +120,12 @@ input[type=text] {
 * Media Queries - Index
 */
 
+@media (max-width: 991.98px) {
+    .form_header {
+        font-size: 3rem;
+    }
+}
+
 @media (max-width: 767.98px) {
     .index_intro_div {
 
@@ -149,6 +149,10 @@ input[type=text] {
 
     .post_content {
         font-size: 1.125rem;
+    }
+
+    .form_header {
+        font-size: 2.25rem;
     }
 }
 
@@ -176,6 +180,10 @@ input[type=text] {
 
     .post_content {
         font-size: 1rem;
+    }
+
+    .form_header {
+        font-size: 2rem;
     }
 }
 
