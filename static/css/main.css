@@ -83,10 +83,11 @@ input[type=text] {
 */
 
 .create_post_div {
-    margin-top: 8rem;
+    margin-top: 7rem;
 }
 
 .inputs {
+    width: 100%;
     border: 1px solid #ccc;
     display: block;
     margin: 6px auto;
@@ -95,6 +96,7 @@ input[type=text] {
 }
 
 .sub_button {
+    width: 100%;
     display: block;
     background-color: Transparent;
     border: 1px solid #ccc;
