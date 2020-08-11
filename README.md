@@ -1,33 +1,30 @@
 # Personal Blog (JODBlog)
 
-Simple one page website that displays blog posts.
+Simple website that displays a home page for blog posts, login page for
+ admin, and a create/edit/delete page.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will advise how to create a profile for login purposes
+, create a database for post storage, and how to launch locally
+ (instructions on how to deploy to Heroku will not be covered).
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+For this to work, you will want to install Flask, sqlalchemy, and flask_login.
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+First, download the project folder from here:
 
-Say what the step will be
 
-```
-Give the example
-```
 
-And repeat
+Within your terminal/cmd/powershell, use pip install for the needed items:
 
 ```
-until finished
+pip install Flask
+pip install sqlalchemy
+pip install flask_login
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
