@@ -15,7 +15,8 @@ For this to work, you will want to install Flask, sqlalchemy, and flask_login.
 
 ### Installing
 
-First, download the project folder from here:
+First, download the project folder from [here](https://github.com/8BitJustin
+/personal-blog).
 
 
 
