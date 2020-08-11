@@ -5,8 +5,7 @@ Simple website that displays a home page for blog posts, login page for
 
 ## Getting Started
 
-These instructions will advise how to create a profile for login purposes
-, create a database for post storage, and how to launch locally
+These instructions will advise how to create a profile for login purposes, create a database for post storage, and how to launch locally
  (instructions on how to deploy to Heroku will not be covered).
 
 ### Prerequisites
@@ -15,12 +14,10 @@ For this to work, you will want to install Flask, sqlalchemy, and flask_login.
 
 ### Installing
 
-First, download the project folder from [here](https://github.com/8BitJustin
-/personal-blog).
+First, download the project folder from [here](https://github.com/8BitJustin/personal-blog).
 
-
-
-Within your terminal/cmd/powershell, use pip install for the needed items:
+Once this is placed in your desired folder, within your terminal/cmd
+/powershell, use pip install for the needed items:
 
 ```
 pip install Flask
@@ -28,23 +25,56 @@ pip install sqlalchemy
 pip install flask_login
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+## Creating Databases
 
-## Running the tests
+This will instruct how to make each database.
 
-Explain how to run the automated tests for this system
+### User database
 
-### Break down into end to end tests
-
-Explain what these tests test and why
+Before you can create a user to be able to login, you need to create a
+ database for that user.
+ 
+Within the terminal/cmd/powershell (while in the directory of the project
+), go into Python. Once within Python, import both db and User:
 
 ```
-Give an example
+from app import db, User
 ```
 
-### And coding style tests
+Then created the table:
 
-Explain what these tests test and why
+```
+db.create_all()
+```
+
+If there are no errors, you are good.
+
+Now to create the user:
+
+```
+db.session.add(User(email = "desired email", password = "desired password"))
+```
+
+After creating, commit changes:
+
+```
+db.session.commit()
+```
+
+This should put the created profile in place. To test, within Python, type
+ the following:
+ 
+```
+User.query.all()
+```
+
+If a 'User 1' displays, you are all set.
+
+### Blog database
+
+You can't have a blog site without a place to put the blog entries, right?
+
+To create the database, just like above, enter Python, and type the following:
 
 ```
 Give an example
