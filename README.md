@@ -1,6 +1,6 @@
-# Project Title
+# Personal Blog (JODBlog)
 
-One Paragraph of project description goes here
+Simple one page website that displays blog posts.
 
 ## Getting Started
 
