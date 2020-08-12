@@ -1,7 +1,10 @@
 # Personal Blog (JODBlog)
 
-Simple website that displays a home page for blog posts, login page for
- admin, and a create/edit/delete page.
+Simple website that displays a home page for blog posts, login page for admin, and a create/edit/delete page.
+
+The main page is accessible to anyone that is able to view normally. The
+ login button will lead you to the posts page, where only the user that logs
+  in can create/edit/delete posts.
 
 ## Getting Started
 
@@ -77,40 +80,44 @@ You can't have a blog site without a place to put the blog entries, right?
 To create the database, just like above, enter Python, and type the following:
 
 ```
-Give an example
+from app import db
 ```
+
+And with that imported, create the database/table:
+
+```
+db.create_all()
+```
+
+Now both items should be in place. :)
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+To run this on the your local system, have a terminal/cmd/powershell window
+ opened and within the directory of the project, simply input the following:
+ 
+```
+python app.py
+```
+
+The terminal should show some information, including a localhost link
+. Within your browser, simply go to **localhost:5000**, which will display
+ the website.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [Python](https://www.python.org/) - Main language used
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/) - The web framework used
+* [SQLAlchemy](https://www.sqlalchemy.org/) - For databases
+* [Flask-Login](https://flask-login.readthedocs.io/en/latest/) - User session management
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* **Justin Olson** - *Initial work* - [Github](https://github.com/8BitJustin
+) / [Portfolio](https://jolsondigital.netlify.app/)
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Udemy - The Python Mega Course
+* FreeCodeCamp - Learn Flask for Python
 
