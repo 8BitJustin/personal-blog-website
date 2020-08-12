@@ -130,6 +130,14 @@ footer .container {
     text-align: right;
 }
 
+.footer_email_link,
+.footer_email_link:visited,
+.footer_email_link:hover,
+.footer_email_link:active {
+    color: #6c757d;
+    text-decoration: none;
+}
+
 /*
 * Media Queries
 */
